@@ -196,6 +196,17 @@ namespace Carismar.NuGet.DataServices
                     return;
                 }
                 AddPackageToCache(PackageCache, absoluteLatest, latest, checkFrameworks, context, path, package);
+
+                // Set additional attributes after visiting all packages
+                foreach (var entry in absoluteLatest.Values)
+                {
+                    entry.Item2.IsAbsoluteLatestVersion = true;
+                }
+
+                foreach (var entry in latest.Values)
+                {
+                    entry.Item2.IsLatestVersion = true;
+                }
             }
         }
 
