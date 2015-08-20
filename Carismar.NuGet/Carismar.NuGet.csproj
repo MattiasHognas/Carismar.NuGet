@@ -196,8 +196,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="NuGet.Core.dll" />
-    <Content Include="NuGet.Server.dll" />
+    <None Include="NuGet.Core.dll" />
+    <None Include="NuGet.Server.dll" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
